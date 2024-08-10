@@ -65,13 +65,11 @@ function Code() {
               <AccordionTrigger className="px-3">{listaItem.name}</AccordionTrigger>
               <AccordionContent className="max-h-[300px] overflow-y-auto">
                 {listaItem.value.map((exercicio: any, exercicioIndex: any) => (
-                  <Accordion type="single" collapsible>
                     <Exercicio
                       key={Math.random() * exercicioIndex}
                       exercicio={exercicio}
                       onCodigoRenderizado={handleCodigoRenderizado}
                     />
-                  </Accordion>
                 ))}
               </AccordionContent>
             </AccordionItem>
