@@ -1,12 +1,9 @@
-
-
 const exercicio1 = () => {
     let entrada = "15"
     entrada = parseInt(entrada)
     let soma = entrada + entrada;
     console.log(soma)
 }
-
 
 const exercicio2 = () => {
     let entrada = prompt("Entre com a idade: ");
@@ -106,19 +103,3 @@ const exercicio10 = () => {
         }
     }
 }
-
-const toRun = () => {
-    exercicio1();
-    exercicio2();
-    exercicio3();
-    exercicio4();
-    exercicio5();
-    exercicio6();
-    exercicio7();
-    exercicio8();
-    exercicio9();
-    exercicio10();
-};
-
-// Execute all exercises
-toRun();

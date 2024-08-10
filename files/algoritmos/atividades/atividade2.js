@@ -81,5 +81,3 @@ const exercicio10 = () => {
         console.log();
     }
 }
-
-exercicio10()
