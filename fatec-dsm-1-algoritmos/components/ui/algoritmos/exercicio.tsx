@@ -4,6 +4,13 @@ import prettier from "prettier";
 import parserBabel from "prettier/plugins/babel";
 import * as prettierPluginEstree from "prettier/plugins/estree";
 
+// const parserBabel = dynamic(() => import("prettier/plugins/babel") as any, {
+//   ssr: false, // Não renderizar no servidor
+// });
+// const prettierPluginEstree = dynamic(() => import("prettier/plugins/estree") as any, {
+//   ssr: false, 
+// });
+
 interface ExercicioProps {
   exercicio: {
     name: string;
@@ -32,7 +39,6 @@ function Exercicio({ exercicio, onCodigoRenderizado }: ExercicioProps) {
   useEffect(() => {
     if (mostrarCodigo) {
       console.log("antigo", exercicio.resposta);
-      // Formate o código quando ele for exibido
       prettier
         .format(exercicio.resposta, {
           parser: "babel",

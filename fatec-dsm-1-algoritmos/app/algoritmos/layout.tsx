@@ -9,9 +9,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>
         {children}
-        </Providers>
         <script src="prism.js" async />
       </body>
     </html>

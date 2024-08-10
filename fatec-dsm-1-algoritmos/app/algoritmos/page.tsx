@@ -4,39 +4,26 @@ import React from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript"; // Language
 import "prismjs/components/prism-javascript";
-// import "prismjs/themes/prism-tomorrow.css";
 import { useEffect } from "react";
-import exercicio1 from "@/lib/converted/ex1";
-import exercicio2 from "@/lib/converted/ex2";
-import exercicio3 from "@/lib/converted/ex3";
-import exercicio4 from "@/lib/converted/ex4";
+import exercicio1 from "@/lib/algoritmos/converted/ex1";
+import exercicio2 from "@/lib/algoritmos/converted/ex2";
+import exercicio3 from "@/lib/algoritmos/converted/ex3";
+import exercicio4 from "@/lib/algoritmos/converted/ex4";
 import "./prism.css";
-// import prettier from "prettier";
-// const parserBabel = dynamic(() => import("prettier/plugins/babel") as any, {
-//   ssr: false, // Não renderizar no servidor
-// });
-// const prettierPluginEstree = dynamic(() => import("prettier/plugins/estree") as any, {
-//   ssr: false, 
-// });
-
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Exercicio from "@/components/ui/exercicio";
-
-
-// const testando = [...exercicio1, ...exercicio2, ...exercicio3, ...exercicio4];
-let lista = 1;
-const testando = [...exercicio1];
+import Exercicio from "@/components/ui/algoritmos/exercicio";
 
 type Lista = {
   name: string;
   value: any;
 };
 
+let lista = 1;
 const listas: Lista[] = [
   {
     name: `Exercício ${lista++}`,
@@ -75,7 +62,7 @@ function Code() {
       <Accordion collapsible className="w-full">
           {listas.map((listaItem, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
-              <AccordionTrigger>{listaItem.name}</AccordionTrigger>
+              <AccordionTrigger className="px-3">{listaItem.name}</AccordionTrigger>
               <AccordionContent className="max-h-[300px] overflow-y-auto">
                 {listaItem.value.map((exercicio: any, exercicioIndex: any) => (
                   <Accordion type="single" collapsible>
