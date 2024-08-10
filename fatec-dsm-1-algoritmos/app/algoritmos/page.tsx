@@ -59,7 +59,7 @@ function Code() {
       <h1 className="text-center mb-3 text-xl">Listas de Exercícios</h1>
       <h1 className="text-center mb-3 text-base">Algoritmos e Lógica de Programação</h1>
       <div className="bg-gray-800 bg-opacity-20 border rounded-md">
-      <Accordion collapsible className="w-full">
+      <Accordion collapsible className="w-full" type="single">
           {listas.map((listaItem, index) => (
             <AccordionItem key={index} value={`item-${index}`}>
               <AccordionTrigger className="px-3">{listaItem.name}</AccordionTrigger>
