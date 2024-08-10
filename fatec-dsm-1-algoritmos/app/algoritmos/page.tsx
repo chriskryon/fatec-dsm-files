@@ -26,19 +26,19 @@ type Lista = {
 let lista = 1;
 const listas: Lista[] = [
   {
-    name: `Exercício ${lista++}`,
+    name: `Lista ${lista++}`,
     value: exercicio1,
   },
   {
-    name: `Exercício ${lista++}`,
+    name: `Lista ${lista++}`,
     value: exercicio2,
   },
   {
-    name: `Exercício ${lista++}`,
+    name: `Lista ${lista++}`,
     value: exercicio3,
   },
   {
-    name: `Exercício ${lista++}`,
+    name: `Lista ${lista++}`,
     value: exercicio4,
   },
 ];
