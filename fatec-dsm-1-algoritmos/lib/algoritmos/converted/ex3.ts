@@ -3,101 +3,118 @@ interface Exercicio {
   resposta: string;
 }
 
-const exercicios3: Exercicio[] = [
+const exercicio3: Exercicio[] = [
   {
     name: "exercicio1",
-    resposta: `for (let i = 0; i < 10; i++) {
-          if (i % 2 == 1) {
-              console.log(i);
-          }
-      }
-`,
+    resposta: `const exercicio1 = (a, b) => {
+    for (let i = a; i <= b; i++) {
+        console.log(i);
+    }
+};`,
   },
   {
     name: "exercicio2",
-    resposta: `for (let i = 10; i > 0; i--) {
-          if (i % 2 == 1) {
-              console.log(i);
-          }
-      }
-`,
+    resposta: `const exercicio2 = (a, b) => {
+    for (; a <= b; a++) {
+        console.log(a);
+    }
+};`,
   },
   {
     name: "exercicio3",
-    resposta: `let placa = prompt("Entre com a placa: ");
-      for (let i = 0; i < placa.length; i++) {
-          console.log(placa[i]);
-      }
-`,
+    resposta: `const exercicio3 = (a, b) => {
+    console.log("Exercício 3");
+    if (b < a) {
+        let temp = a;
+        a = b;
+        b = temp;
+    }
+    for (; a <= b; a++) {
+        console.log(a);
+    }
+};`,
   },
   {
     name: "exercicio4",
-    resposta: `let placa = prompt("Entre com a placa: ");
-      for (let i = 0; i < placa.length; i++) {
-          let ascii = placa.charCodeAt(i);
-          console.log(placa[i], ascii);
-      }
-`,
+    resposta: `const exercicio4 = (a, b, tipo) => {
+    if (tipo == "+") {
+        return a + b;
+    } else if (tipo == "-") {
+        return a - b;
+    } else if (tipo == "*") {
+        return a * b;
+    } else if (tipo == "/") {
+        return a / b;
+    }
+};`,
   },
   {
     name: "exercicio5",
-    resposta: `let placa = prompt("Entre com a placa: ");
-      for (let i = 0; i < placa.length; i++) {
-          let ascii = placa.charCodeAt(i);
-          if (ascii >= 48 && ascii <= 57) {
-              console.log(placa[i], ascii);
-          }
-      }
-`,
+    resposta: `const exercicio5 = (a, b, tipo) => {
+    let r = NaN;
+    if (tipo == "+") {
+        r = a + b;
+    } else if (tipo == "-") {
+        r = a - b;
+    } else if (tipo == "*") {
+        r = a * b;
+    } else if (tipo == "/") {
+        r = a / b;
+    } else if (tipo == "**") {
+        r = a ** b;
+    }
+    return r;
+};`,
   },
   {
     name: "exercicio6",
-    resposta: `let nros = ["19", "11", "5", "10", "20"];
-      let soma = 0;
-      for (let i = 0; i < nros.length; i++) {
-          soma += parseInt(nros[i]);
-      }
-      console.log("Somatório:", soma);
-`,
+    resposta: `const exercicio6 = (a, b, c) => {
+    return \`\${a} \${b} \${c}\`;
+};`,
   },
   {
     name: "exercicio7",
-    resposta: `let nros = "19,11,5,10,20";
-      let arrayNros = nros.split(",");
-      let soma = 0;
-      for (let i = 0; i < arrayNros.length; i++) {
-          soma += parseInt(arrayNros[i]);
-      }
-      console.log("Somatório:", soma);
-`,
+    resposta: `const exercicio7 = (a, b) => {
+    if (a.length > b.length) {
+        return a;
+    } else {
+        return b;
+    }
+};`,
   },
   {
     name: "exercicio8",
-    resposta: `let nomes = ["Pedro", "Lucy", "Ana", "Karla"];
-      for (let i = 0; i < nomes.length; i++) {
-          console.log(nomes[i][0]);
-      }
-`,
+    resposta: `const exercicio8 = (nro) => {
+    let soma = 0;
+    for (let i = 0; i <= nro; i++) {
+        soma += i;
+    }
+    return soma;
+};`,
   },
   {
     name: "exercicio9",
-    resposta: `let nomes = ["Pedro", "Lucy", "Ana", "Karla"];
-      for (let i = 0; i < nomes.length; i++) {
-          console.log(nomes[i][nomes[i].length - 1]);
-      }
-`,
+    resposta: `const exercicio9 = (nro) => {
+    let total = 1;
+    for (let i = 1; i <= nro; i++) {
+        total = total * i;
+    }
+    return total;
+};`,
   },
   {
     name: "exercicio10",
-    resposta: `let nomes = ["Pedro", "Lucy", "Ana", "Karla"];
-      for (let i = 0; i < nomes.length; i++) {
-          for (let j = 0; j < nomes[i].length; j++) {
-              console.log(nomes[i][j]);
-          }
-          console.log();
-      }
-`,
+    resposta: `const exercicio10 = (nro) => {
+    if (nro < 0) {
+        return NaN;
+    }
+    let total = 1;
+    for (let i = 1; i <= nro; i++) {
+        total = total * i;
+    }
+    return total;
+};`,
   },
 ];
 
-export default exercicios3;
+export default exercicio3;
